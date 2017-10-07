@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- node
+install:
+  - yarn
+script:
+  - yarn test
+deploy:
+  provider: npm
+  email: mats.pfeiffer@googlemail.com
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
+cache:
+  yarn: true
+notifications:
+  email:
+    on_success: never
+    on_failure: always
