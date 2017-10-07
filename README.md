@@ -13,7 +13,7 @@ or
 
 ## configuration
 
-you need to pass a config file to magnolia which include the following named exports:
+you need to pass a config file or object which include the following named exports or keys:
 
 ``` javascript
 const db = {
