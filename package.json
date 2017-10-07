@@ -1,6 +1,6 @@
 {
   "name": "koa-autowire",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "autowiring koa rest endpoints and middlewares",
   "keywords": [
     "koa",
@@ -14,7 +14,7 @@
   "author": "Mats Pfeiffer",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest --forceExit"
   },
   "jest": {
     "testEnvironment": "node"
