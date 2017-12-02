@@ -15,7 +15,8 @@
   "license": "MIT",
   "scripts": {
     "test": "jest --forceExit",
-    "release": "standard-version"
+    "release": "standard-version",
+    "lint": "eslint --ext .js --fix ./"
   },
   "jest": {
     "testEnvironment": "node"
