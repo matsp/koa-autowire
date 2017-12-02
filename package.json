@@ -1,6 +1,6 @@
 {
   "name": "koa-autowire",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "autowiring koa rest endpoints and middlewares",
   "keywords": [
     "koa",
@@ -16,8 +16,7 @@
   "scripts": {
     "test": "jest --forceExit",
     "release": "standard-version",
-    "lint": "eslint --ext .js --fix ./",
-    "release": "standard-version"
+    "lint": "eslint --ext .js --fix ./"
   },
   "jest": {
     "testEnvironment": "node"
