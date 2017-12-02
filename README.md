@@ -1,8 +1,10 @@
 # koa-autowire
+[![npm](https://img.shields.io/npm/l/koa-autowire.svg)]()
+[![npm](https://img.shields.io/npm/dt/koa-autowire.svg)](https://www.npmjs.com/package/koa-autowire)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/matsp/koa-autowire.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/matsp/koa-autowire.svg?branch=master)](https://travis-ci.org/matsp/koa-autowire) 
 [![npm version](https://badge.fury.io/js/koa-autowire.svg)](https://badge.fury.io/js/koa-autowire)
+[![Build Status](https://travis-ci.org/matsp/koa-autowire.svg?branch=master)](https://travis-ci.org/matsp/koa-autowire) 
+[![Greenkeeper badge](https://badges.greenkeeper.io/matsp/koa-autowire.svg)](https://greenkeeper.io/)
 
 ## installation
 
