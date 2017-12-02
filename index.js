@@ -1,4 +1,7 @@
-const R = require('ramda')
+const map = require('ramda/src/map')
+const filter = require('ramda/src/filter')
+const propEq = require('ramda/src/propEq')
+const prepend = require('ramda/src/prepend')
 
 module.exports.autowire = (conf) => {
   /* app creation */
@@ -6,22 +9,22 @@ module.exports.autowire = (conf) => {
   const app = new koa()
   const router = require('koa-router')()
 
-  R.map((n) => app.use(require(n.package)(...n.options)), conf.koa.middlewares)
+  map((n) => app.use(require(n.package)(...n.options)), conf.koa.middlewares)
 
-  var methodRoute = (method) => R.propEq('method', method)
+  var methodRoute = (method) => propEq('method', method)
   var isGetRoute = methodRoute('get')
   var isPostRoute = methodRoute('post')
   var isPutRoute = methodRoute('put')
   var isDeleteRoute = methodRoute('delete')
-  var getFilter = R.filter(isGetRoute, conf.endpoints)
-  var postFilter = R.filter(isPostRoute, conf.endpoints)
-  var putFilter = R.filter(isPutRoute, conf.endpoints)
-  var deleteFilter = R.filter(isDeleteRoute, conf.endpoints)
+  var getFilter = filter(isGetRoute, conf.endpoints)
+  var postFilter = filter(isPostRoute, conf.endpoints)
+  var putFilter = filter(isPutRoute, conf.endpoints)
+  var deleteFilter = filter(isDeleteRoute, conf.endpoints)
 
-  R.map((n) => router.get(...R.prepend(n.route, n.middlewares)), getFilter)
-  R.map((n) => router.post(...R.prepend(n.route, n.middlewares)), postFilter)
-  R.map((n) => router.put(...R.prepend(n.route, n.middlewares)), putFilter)
-  R.map((n) => router.delete(...R.prepend(n.route, n.middlewares)), deleteFilter)
+  map((n) => router.get(...prepend(n.route, n.middlewares)), getFilter)
+  map((n) => router.post(...prepend(n.route, n.middlewares)), postFilter)
+  map((n) => router.put(...prepend(n.route, n.middlewares)), putFilter)
+  map((n) => router.delete(...prepend(n.route, n.middlewares)), deleteFilter)
   app.use(router.routes())
 
   app.context.db = conf.db

@@ -1,6 +1,6 @@
 const conf = require('./config')
 const server = require('../index')
-const request = require('supertest');
+const request = require('supertest')
 
 beforeAll(() => {
   const app = server.autowire(conf)
