@@ -16,7 +16,8 @@
   "scripts": {
     "test": "jest --forceExit",
     "release": "standard-version",
-    "lint": "eslint --ext .js --fix ./"
+    "lint": "eslint --ext .js --fix ./",
+    "release": "standard-version"
   },
   "jest": {
     "testEnvironment": "node"
