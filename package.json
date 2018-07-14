@@ -1,7 +1,7 @@
 {
   "name": "koa-autowire",
   "version": "1.1.2",
-  "description": "autowiring koa rest endpoints and middlewares",
+  "description": "autowiring koa http endpoints and middlewares",
   "keywords": [
     "koa",
     "microservice",
@@ -11,7 +11,7 @@
   ],
   "main": "index.js",
   "repository": "https://github.com/matsp/koa-autowire",
-  "author": "Mats Pfeiffer",
+  "author": "Mats Pfeiffer <mats.pfeiffer@googlemail.com>",
   "license": "MIT",
   "scripts": {
     "test": "jest",
