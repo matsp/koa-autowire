@@ -1,4 +1,5 @@
 # koa-autowire
+
 [![npm](https://img.shields.io/npm/l/koa-autowire.svg)]()
 [![npm](https://img.shields.io/npm/dt/koa-autowire.svg)](https://www.npmjs.com/package/koa-autowire)
 
@@ -6,7 +7,7 @@
 [![Build Status](https://travis-ci.org/matsp/koa-autowire.svg?branch=master)](https://travis-ci.org/matsp/koa-autowire) 
 [![Greenkeeper badge](https://badges.greenkeeper.io/matsp/koa-autowire.svg)](https://greenkeeper.io/)
 
-## installation
+## Installation
 
 `npm install koa-autowire`
 
@@ -14,7 +15,7 @@ or
 
 `yarn add koa-autowire`
 
-## configuration
+## Configuration
 
 you need to pass a config file or object which include the following named exports or keys:
 
@@ -46,14 +47,21 @@ const endpoints = {
 ```
 
 
-## usage
+## Usage
 
-``` javascript
+
+### Start app
+
+```javascript
 const config = require('./config.js')
 const server = require('koa-autowire')
 
 const app = server.autowire(config)
 server.start(app);
- 
 ```
 
+### Stop app
+
+```javascript
+server.stop(app)
+```
