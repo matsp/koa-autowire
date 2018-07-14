@@ -2,10 +2,11 @@ const conf = require('./config')
 const server = require('../index')
 const request = require('supertest')
 
-beforeAll(() => {
-  const app = server.autowire(conf)
-  server.start(app)
-})
+const app = server.autowire(conf)
+
+beforeAll(() => server.start(app))
+
+afterAll(() => server.stop(app))
 
 describe('get routes', () => {
   it('should return http-status 200 on /', async () => {
