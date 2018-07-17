@@ -18,9 +18,6 @@
     "release": "standard-version",
     "lint": "eslint --ext .js --fix ./"
   },
-  "jest": {
-    "testEnvironment": "node"
-  },
   "dependencies": {
     "koa": "^2.5.2",
     "koa-router": "^7.4.0",
