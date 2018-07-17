@@ -1,5 +1,5 @@
-const conf = require('./config')
-const server = require('../index')
+const conf = require('../test.config.js')
+const server = require('../index.js')
 const request = require('supertest')
 
 const app = server.autowire(conf)
