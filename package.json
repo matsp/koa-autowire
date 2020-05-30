@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "koa": "^2.7.0",
-    "koa-router": "^7.4.0",
+    "koa-router": "^9.0.0",
     "ramda": "^0.26.1"
   },
   "devDependencies": {
